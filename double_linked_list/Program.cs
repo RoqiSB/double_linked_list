@@ -107,9 +107,10 @@ namespace double_linked_list
                     START.prev = null;
                 return true;
             }
-            // if the to be deleted is in bettween the list then the following llines of is executed
+            // if the to be deleted is in between the list then the following llines of is executed
             previous.next = current.next;
-            
+            current.next.prev = previous;
+            return true;
             }
         }
     }
