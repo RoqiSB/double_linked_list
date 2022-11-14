@@ -107,17 +107,32 @@ namespace double_linked_list
                     START.prev = null;
                 return true;
             }
-            // if the to be deleted is in between the list then the following llines of is executed
+            // if the to be deleted is in between the list then the following lines of is executed
+
             previous.next = current.next;
             current.next.prev = previous;
             return true;
-            }
+            
+        }
             public bool listEmpty()
         {
             if (START == null)
                 return true;
             else
                 return false;
+        }
+
+        public void ascending()
+        {
+            if (listEmpty())
+                Console.WriteLine("\nList is Empty");
+            else
+            {
+                Console.WriteLine("\nRecord in the ascending pprder of" + "roll number are:\n");
+                Node currentNode;
+                for (currentNode = START; currentNode != null; currentNode = currentNode.next)
+                    Console.Write(currentNode.noMhs + "" + currentNode.name + "/n");
+            }
         }
         }
     }
