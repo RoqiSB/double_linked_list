@@ -231,11 +231,15 @@ namespace double_linked_list
                             return;
                         default:
                             {
-                                Console.WriteLine(("\nInvalid option");
+                                Console.WriteLine("\nInvalid option");
                             }
                             break;
                     }
-                }  
+                } 
+                catch (Exception e)
+                {
+                    Console.WriteLine("Check for the value entered.");
+                }
             }
         }
     }
