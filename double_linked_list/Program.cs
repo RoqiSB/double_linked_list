@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Security;
 using System.Security.Cryptography.X509Certificates;
 
 namespace double_linked_list
@@ -131,7 +132,7 @@ namespace double_linked_list
                 Console.WriteLine("\nRecord in the ascending pprder of" + "roll number are:\n");
                 Node currentNode;
                 for (currentNode = START; currentNode != null; currentNode = currentNode.next)
-                    Console.Write(currentNode.noMhs + "" + currentNode.name + "/n");
+                    Console.Write(currentNode.noMhs + "" + currentNode.name + "\n");
             }
         }
         public void descending()
@@ -141,7 +142,14 @@ namespace double_linked_list
             else
             Console.WriteLine("\nRecord in the Descending order of" + "roll number are: \n");
             Node currentNode;
-            
+            for (currentNode = START; currentNode != null; currentNode = currentNode.next)
+            { }
+
+            while(currentNode != null)
+            {
+                Console.Write(currentNode.noMhs + "" + currentNode.name + "\n");
+
+            }
         }
     }
        
