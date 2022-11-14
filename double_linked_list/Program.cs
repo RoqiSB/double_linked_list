@@ -80,6 +80,13 @@ namespace double_linked_list
             current.prev = newNode;
             previous.next = newNode;
             }
+        public bool search(int rollNo, ref Node previous, ref Node current)
+        {
+            for (previous = current = START; current != null &&
+                rollNo != current.noMhs; previous = current,
+                current = current.next) { }
+            return (current != null);
+        }
         }
     }
 
