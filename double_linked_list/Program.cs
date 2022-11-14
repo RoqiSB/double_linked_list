@@ -226,8 +226,16 @@ namespace double_linked_list
                                     Console.WriteLine("\nName : "+ curr.name);
                                 }
                             }
+                            break;
+                        case '6':
+                            return;
+                        default:
+                            {
+                                Console.WriteLine(("\nInvalid option");
+                            }
+                            break;
                     }
-                }   
+                }  
             }
         }
     }
