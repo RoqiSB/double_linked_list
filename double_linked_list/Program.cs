@@ -201,7 +201,12 @@ namespace double_linked_list
                                 obj.ascending();
                             }
                             break;
-                     
+                        case '4':
+                            {
+                                obj.descending();
+                            }
+                            break;
+                        case '5':
                     }
                 }   
             }
