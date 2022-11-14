@@ -19,7 +19,7 @@ namespace double_linked_list
     class DoubleLinkedList
     {
         Node START;
-        
+
         //construktor
         public DoubleLinkedList()
         {
@@ -46,7 +46,7 @@ namespace double_linked_list
                     return;
                 }
                 newNode.next = START;
-                if(START != null)
+                if (START != null)
                     START.prev = newNode;
                 newNode.prev = null;
                 START = newNode;
@@ -61,7 +61,7 @@ namespace double_linked_list
                 if (nim == current.noMhs)
                 {
                     Console.WriteLine("\nDuplicate roll numbers not allowed");
-                    return ;
+                    return;
                 }
             }
             //on the execution of the aboce for loop, prev and
@@ -79,7 +79,7 @@ namespace double_linked_list
             }
             current.prev = newNode;
             previous.next = newNode;
-            }
+        }
         public bool search(int rollNo, ref Node previous, ref Node current)
         {
             for (previous = current = START; current != null &&
@@ -94,13 +94,13 @@ namespace double_linked_list
             if (search(rollno, ref previous, ref current) == false)
                 return false;
             //the begining of data
-            if(current.next == null)
+            if (current.next == null)
             {
                 previous.next = null;
                 return true;
             }
             //node between two node in the list
-            if(current == START)
+            if (current == START)
             {
                 START = START.next;
                 if (START != null)
@@ -112,9 +112,9 @@ namespace double_linked_list
             previous.next = current.next;
             current.next.prev = previous;
             return true;
-            
+
         }
-            public bool listEmpty()
+        public bool listEmpty()
         {
             if (START == null)
                 return true;
@@ -134,7 +134,18 @@ namespace double_linked_list
                     Console.Write(currentNode.noMhs + "" + currentNode.name + "/n");
             }
         }
+        public void descending()
+        {
+            if(listEmpty())
+                Console.WriteLine("\nList is empty");
+            else
+            Console.WriteLine("\nRecord in the Descending order of" + "roll number are: \n");
+            Node currentNode;
+            
         }
+    }
+       
+        
     }
 
 
@@ -142,10 +153,10 @@ namespace double_linked_list
 
 
 
-    
+
     class Program
     {
-        static void Main(string[]args)
+        static void Main(string[] args)
         {
 
         }
